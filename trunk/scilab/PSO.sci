@@ -41,7 +41,7 @@ function PSO()
         [gbest gbestVal(i)] = Roost(birds, roostPoint);
         
         //Recalcula a velocidade baseada no pássaro de maior sucesso.
-        velocities = CornfieldVector(birds, velocities, gbest);
+        velocities = CornfieldVector(birds, velocities, gbest,gbestVal(i));
 
         //Recalcula a posição de cada pássaro.
         birds = birds+velocities;
